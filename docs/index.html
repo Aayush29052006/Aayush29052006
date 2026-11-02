@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aayush Jivan Chaudhari · Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Aayush Jivan Chaudhari, Full-Stack Developer: Python, Flask, FastAPI, React. Tested, documented, CI-backed software." />
+<meta property="og:title" content="Aayush Jivan Chaudhari · Full-Stack Developer" />
+<meta property="og:description" content="Building Ideas. Engineering Solutions. Delivering Impact." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FF5F6D'/%3E%3Cstop offset='.5' stop-color='%234ADE80'/%3E%3Cstop offset='1' stop-color='%23A78BFA'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230D1117'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EAC%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0D1117;
+    --surface: #161B22;
+    --surface-2: #1C2128;
+    --border: #30363D;
+    --text: #E6EDF3;
+    --muted: #8B949E;
+    --red: #FF5F6D;
+    --orange: #FFA94D;
+    --yellow: #FDE047;
+    --green: #4ADE80;
+    --cyan: #22D3EE;
+    --blue: #60A5FA;
+    --violet: #A78BFA;
+    --pink: #F472B6;
+    --rainbow: linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--green), var(--cyan), var(--blue), var(--violet));
+    --radius: 14px;
+    --max: 1120px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #F8FAFC; --surface: #FFFFFF; --surface-2: #F1F5F9; --border: #E2E8F0;
+      --text: #0F172A; --muted: #475569;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #F8FAFC; --surface: #FFFFFF; --surface-2: #F1F5F9; --border: #E2E8F0;
+    --text: #0F172A; --muted: #475569;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  .rainbow-text { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .bar { height: 3px; border-radius: 3px; background: var(--rainbow); }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .logo { font-weight: 800; text-decoration: none; font-size: 18px; }
+  .links { display: flex; gap: 20px; align-items: center; }
+  .links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; }
+  .links a:hover { color: var(--text); }
+  .theme-btn {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    border-radius: 999px; width: 36px; height: 36px; cursor: pointer; font-size: 16px;
+  }
+  @media (max-width: 760px) { .links a.hide-sm { display: none; } }
+
+  /* Hero */
+  .hero { padding: 88px 0 64px; position: relative; }
+  .hero::before {
+    content: ""; position: absolute; inset: -120px 0 auto; height: 460px; z-index: -1; opacity: .22;
+    background: radial-gradient(40% 60% at 20% 40%, var(--violet), transparent 70%),
+                radial-gradient(35% 55% at 55% 30%, var(--cyan), transparent 70%),
+                radial-gradient(30% 50% at 85% 45%, var(--red), transparent 70%);
+    filter: blur(30px);
+  }
+  .eyebrow { color: var(--cyan); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.05; margin: 12px 0 14px; font-weight: 800; letter-spacing: -.02em; }
+  .tagline { font-size: clamp(17px, 2.4vw, 21px); color: var(--muted); max-width: 680px; margin: 0 0 28px; }
+  .typed { color: var(--text); min-height: 1.6em; }
+  .typed::after { content: "▍"; color: var(--violet); animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--border); background: var(--surface);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); border-color: var(--violet); }
+  .btn.primary { background: var(--rainbow); color: #0D1117; border: 0; }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 48px; }
+  .fact { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+  .fact b { display: block; font-size: 28px; font-weight: 800; }
+  .fact span { color: var(--muted); font-size: 14px; }
+  .fact:nth-child(1) b { color: var(--red); } .fact:nth-child(2) b { color: var(--orange); }
+  .fact:nth-child(3) b { color: var(--green); } .fact:nth-child(4) b { color: var(--cyan); }
+  @media (max-width: 760px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  .section-head { margin-bottom: 28px; }
+  .section-head h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 10px; letter-spacing: -.01em; }
+  .section-head .bar { width: 96px; }
+  .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
+  .about p { margin: 0 0 14px; color: var(--muted); }
+  .about p strong { color: var(--text); }
+  .pillars { display: grid; gap: 10px; }
+  .pillar { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--c); border-radius: 10px; padding: 12px 14px; }
+  .pillar b { color: var(--c); }
+  .pillar div { color: var(--muted); font-size: 14px; }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .skill-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+  .skill-group h3 { margin: 0 0 12px; font-size: 15px; color: var(--c); text-transform: uppercase; letter-spacing: .06em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--surface-2);
+    border: 1px solid color-mix(in srgb, var(--c, var(--violet)) 45%, var(--border)); color: var(--text);
+  }
+
+  /* Projects */
+  .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+    display: flex; flex-direction: column; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--c); box-shadow: 0 10px 30px -12px color-mix(in srgb, var(--c) 60%, transparent); }
+  .card .shot { aspect-ratio: 16/9; background: var(--surface-2); border-bottom: 1px solid var(--border); overflow: hidden; display: grid; place-items: center; }
+  .card .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .card .shot.logo img { width: 96px; height: 96px; object-fit: contain; }
+  .card .shot.text { font-size: 40px; font-weight: 800; }
+  .card .body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card .num { font-size: 13px; color: var(--c); font-weight: 700; }
+  .card h3 { margin: 0; font-size: 19px; }
+  .card .kind { color: var(--muted); font-weight: 500; font-size: 14px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card .role { font-size: 13px; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 10px; }
+  .card .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+  .card .actions a {
+    font-size: 13px; font-weight: 600; text-decoration: none; padding: 7px 12px; border-radius: 8px;
+    background: color-mix(in srgb, var(--c) 16%, transparent); color: var(--c);
+  }
+  .card .actions span { font-size: 13px; padding: 7px 12px; border-radius: 8px; background: var(--surface-2); color: var(--muted); }
+  @media (max-width: 860px) { .projects { grid-template-columns: 1fr; } }
+
+  /* Experience + certs */
+  .timeline { position: relative; padding-left: 26px; display: grid; gap: 18px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 3px; border-radius: 3px; background: linear-gradient(180deg, var(--red), var(--orange), var(--yellow), var(--green), var(--cyan), var(--blue), var(--violet)); }
+  .tl { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .tl::before { content: ""; position: absolute; left: -25px; top: 18px; width: 13px; height: 13px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px var(--bg); }
+  .tl .when { font-size: 13px; color: var(--c); font-weight: 700; }
+  .tl h3 { margin: 2px 0 4px; font-size: 17px; }
+  .tl p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; margin-top: 28px; }
+  .cert { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+  .cert .issuer { font-size: 12px; font-weight: 700; color: var(--c); text-transform: uppercase; letter-spacing: .06em; }
+  .cert b { font-size: 15px; }
+  .cert .meta { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 13px; }
+  .cert a { color: var(--c); font-weight: 600; text-decoration: none; }
+  details.courses { margin-top: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; }
+  details.courses summary { cursor: pointer; font-weight: 600; }
+  details.courses ol { color: var(--muted); margin: 10px 0 0; }
+
+  /* Contact */
+  .contact { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 44px 20px; position: relative; overflow: hidden; }
+  .contact::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--rainbow); }
+  .contact h2 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 10px; }
+  .contact p { color: var(--muted); margin: 0 auto 24px; max-width: 520px; }
+  .contact .cta { justify-content: center; }
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .typed::after { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo rainbow-text mono" href="#top">Aayush.dev</a>
+    <div class="links">
+      <a class="hide-sm" href="#about">About</a>
+      <a class="hide-sm" href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a class="hide-sm" href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="theme" type="button" aria-label="Toggle light or dark theme">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow mono">Full-Stack Developer · B.Tech Computer Engineering</div>
+    <h1>Hi, I'm <span class="rainbow-text">Aayush Jivan Chaudhari</span></h1>
+    <p class="tagline">Building Ideas. Engineering Solutions. Delivering Impact.<br /><span class="typed mono" id="typed" aria-live="polite"></span></p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects →</a>
+      <a class="btn" href="https://github.com/Aayush29052006">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/aayush-chaudhari-44426232a/">LinkedIn</a>
+      <a class="btn" href="mailto:aayushswapnali@gmail.com">Email</a>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><b>9</b><span>projects shipped</span></div>
+      <div class="fact reveal"><b>600+</b><span>automated tests</span></div>
+      <div class="fact reveal"><b>3 OS</b><span>CI on Ubuntu, Windows, macOS</span></div>
+      <div class="fact reveal"><b>13</b><span>certifications</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>About</h2><div class="bar"></div></div>
+      <div class="about">
+        <div class="reveal">
+          <p>I'm a third-year <strong>B.Tech Computer Engineering</strong> student at SSBT's College of Engineering &amp; Technology, Jalgaon. I learn by shipping: instead of only collecting certificates, I build working software and back it up with <strong>tests, CI and documentation</strong>.</p>
+          <p>Every project has a layered architecture, an automated test suite and a README that explains how it works and why. I like taking one idea all the way: <strong>Contact Vault</strong> started as a desktop app and grew into a multi-user web app with Google OAuth, migrations and 118 tests.</p>
+          <p>I also completed a <strong>Data Science internship</strong> at Uplyx Solutions, working through the full ML pipeline on six projects, and led development of <strong>CareerNexus</strong> for Smart India Hackathon 2026.</p>
+        </div>
+        <div class="pillars reveal">
+          <div class="pillar" style="--c: var(--red)"><b>Backend</b><div>REST APIs with Flask, FastAPI and Express · SQLAlchemy · OAuth 2.0 / JWT</div></div>
+          <div class="pillar" style="--c: var(--orange)"><b>Frontend</b><div>React + Vite · semantic HTML · CSS design tokens · vanilla JavaScript</div></div>
+          <div class="pillar" style="--c: var(--green)"><b>Quality</b><div>pytest · Playwright · GitHub Actions · XSS / CSRF / CORS hardening</div></div>
+          <div class="pillar" style="--c: var(--cyan)"><b>Data &amp; Delivery</b><div>PostgreSQL · SQLite · Alembic · Render · Vercel</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>Skills</h2><div class="bar"></div></div>
+      <div class="skills">
+        <div class="skill-group reveal" style="--c: var(--red)"><h3>Languages</h3><div class="chips"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">SQL</span></div></div>
+        <div class="skill-group reveal" style="--c: var(--orange)"><h3>Backend</h3><div class="chips"><span class="chip">Flask</span><span class="chip">FastAPI</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">SQLAlchemy</span><span class="chip">Authlib / OAuth</span><span class="chip">PyJWT</span><span class="chip">Pydantic</span></div></div>
+        <div class="skill-group reveal" style="--c: var(--yellow)"><h3>Frontend</h3><div class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">Jinja2</span><span class="chip">Vanilla JS</span><span class="chip">Responsive CSS</span></div></div>
+        <div class="skill-group reveal" style="--c: var(--green)"><h3>Databases</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">SQLite</span><span class="chip">Alembic</span></div></div>
+        <div class="skill-group reveal" style="--c: var(--cyan)"><h3>Testing &amp; DevOps</h3><div class="chips"><span class="chip">pytest</span><span class="chip">Playwright</span><span class="chip">GitHub Actions</span><span class="chip">Render</span><span class="chip">Vercel</span><span class="chip">Git</span></div></div>
+        <div class="skill-group reveal" style="--c: var(--violet)"><h3>Desktop, CLI &amp; more</h3><div class="chips"><span class="chip">CustomTkinter</span><span class="chip">Rich</span><span class="chip">Pillow</span><span class="chip">psutil</span><span class="chip">Gemini API</span><span class="chip">Kotlin (learning)</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>Projects</h2><div class="bar"></div></div>
+      <div class="projects" id="project-grid"></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>Experience &amp; Certifications</h2><div class="bar"></div></div>
+      <div class="timeline">
+        <div class="tl reveal" style="--c: var(--green)"><div class="when">Aug – Oct 2025</div><h3>Data Science Intern · Uplyx Solutions Pvt. Ltd.</h3><p>Worked through the full ML pipeline on six projects, including a heart-failure prediction model comparing seven algorithms.</p></div>
+        <div class="tl reveal" style="--c: var(--cyan)"><div class="when">Sep 2026</div><h3>Selected · Internal Smart India Hackathon 2026</h3><p>Team VertexSquad, PS 26134, at SSBT's College of Engineering &amp; Technology, Jalgaon, with CareerNexus.</p></div>
+      </div>
+      <div class="certs" id="cert-grid"></div>
+      <details class="courses reveal">
+        <summary>Google AI Professional Certificate: the 7 courses</summary>
+        <ol><li>AI Fundamentals</li><li>AI for Brainstorming and Planning</li><li>AI for Research and Insights</li><li>AI for Writing and Communicating</li><li>AI for Content Creation</li><li>AI for Data Analysis</li><li>AI for App Building</li></ol>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <h2>Let's build something</h2>
+        <p>I'm open to internships and collaboration on full-stack projects. The fastest way to reach me is email or LinkedIn.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:aayushswapnali@gmail.com">aayushswapnali@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/aayush-chaudhari-44426232a/">LinkedIn</a>
+          <a class="btn" href="https://github.com/Aayush29052006">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year">2026</span> Aayush Jivan Chaudhari · Built with plain HTML, CSS and JavaScript · Hosted on GitHub Pages</div>
+</footer>
+
+<script>
+  const RAW = "https://raw.githubusercontent.com/Aayush29052006";
+  const GH = "https://github.com/Aayush29052006";
+
+  const projects = [
+    { c: "var(--red)", name: "Contact Vault v1.0", kind: "Desktop + CLI", repo: "Contact-Vault", shot: `${RAW}/Contact-Vault/main/screenshots/contacts_dark.png`,
+      text: "A desktop GUI and a full CLI share one validated, deduplicated data layer. Features RFC-compliant email validation, Command-pattern undo and crash-safe atomic writes.",
+      tags: ["CustomTkinter", "email-validator", "pytest", "Cross-OS CI"] },
+    { c: "var(--orange)", name: "Contact Vault v2.0", kind: "Web", repo: "Contact-Vault-V2", shot: `${RAW}/Contact-Vault-V2/main/screenshots/dashboard-dark.png`,
+      text: "Multi-user contact manager with Google sign-in, duplicate detection, two-way undo, a permanent activity log, bulk import and CSV/JSON export.",
+      tags: ["Flask", "SQLAlchemy", "Alembic", "OAuth 2.0", "118 tests"] },
+    { c: "var(--yellow)", name: "Parallel System Monitor v1.0", kind: "Desktop", repo: "Parallel-System-Monitor", shot: `${RAW}/Parallel-System-Monitor/main/screenshots/dashboard_dark_mode.png`,
+      text: "Polls many hosts for CPU and memory in parallel, with a ~3× speed-up measured in its test suite (1.51 s → 0.51 s). Includes a health score and status history.",
+      tags: ["CustomTkinter", "ThreadPoolExecutor", "SQLite", "47 tests"] },
+    { c: "var(--green)", name: "Parallel System Monitor v2.0", kind: "Web", repo: "Parallel-System-Monitor-V2", shot: `${RAW}/Parallel-System-Monitor-V2/main/screenshots/dashboard-dark-mode.png`,
+      text: "The web version reuses v1's polling engine unchanged. Adds live search and sort, sparkline trends and a 24-hour health chart from real history.",
+      tags: ["Flask", "psutil", "JavaScript", "67 tests"] },
+    { c: "var(--cyan)", name: "Session Ledger", kind: "CLI", repo: "Session-Ledger", shot: `${RAW}/Session-Ledger/main/screenshots/full_report.png`,
+      text: "Turns login/logout logs into session history, a live \"who's online\" view and CSV/JSON reports. It copes with messy real-world logs without crashing.",
+      tags: ["Python", "Rich", "pyfiglet", "27 tests"] },
+    { c: "var(--blue)", name: "Pixel Forge", kind: "Web", repo: "Pixel-Forge", shot: `${RAW}/Pixel-Forge/main/docs/screenshots/dark-mode.png`,
+      text: "Batch image converter that reads almost anything, including HEIC and AVIF, and writes 10 formats. It keeps animations and colour profiles, and one bad file never sinks the batch.",
+      tags: ["Flask", "Pillow", "pillow-heif", "157 tests"] },
+    { c: "var(--violet)", name: "Watch Tower", kind: "Web", repo: "Watch-Tower", shot: `${RAW}/Watch-Tower/main/screenshots/02-dashboard-alerts-dark-mode.png`,
+      text: "Log-alerting service that never crashes. It survives corrupted lines, log rotation, missing files and permission errors. Every failure mode has a test that simulates it.",
+      tags: ["Flask", "Fault tolerance", "JavaScript", "72 tests"] },
+    { c: "var(--pink)", name: "CareerNexus", kind: "Team project · SIH 2026", repo: "VertexSquad", logo: `${RAW}/VertexSquad/main/frontend/assets/logos/careernexus-logo.png`,
+      text: "Resume upload, AI skill extraction and internship matching with an explainable score and a skill-gap path. Five role-based portals for students, recruiters, faculty, institutions and admins.",
+      tags: ["FastAPI", "PostgreSQL", "JWT + Google", "Gemini API"],
+      role: "Lead developer: I wrote 102 of the 104 commits. Hackathon prototype; live demo currently offline." },
+    { c: "var(--cyan)", name: "SSBT IGNITE Event Portal", kind: "Team project", private: true, live: "https://e-cell-ignite.vercel.app",
+      text: "A cinematic, Harry Potter-inspired onboarding and event portal: Google sign-in, admission approval, House sorting, a Task Library, a Daily Riddle and an admin office. Fast on low-end phones.",
+      tags: ["React", "Vite", "Node.js", "Express", "SQLite", "Playwright"],
+      role: "Co-developer, built with Piyush Mali. Private repository." },
+  ];
+
+  const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+
+  document.getElementById("project-grid").innerHTML = projects.map((p, i) => {
+    const visual = p.shot
+      ? `<div class="shot"><img loading="lazy" src="${p.shot}" alt="${esc(p.name)} screenshot" /></div>`
+      : p.logo
+        ? `<div class="shot logo"><img loading="lazy" src="${p.logo}" alt="${esc(p.name)} logo" /></div>`
+        : `<div class="shot text rainbow-text">IGNITE</div>`;
+    const actions = [
+      p.repo ? `<a href="${GH}/${p.repo}">Source code</a>` : "",
+      p.live ? `<a href="${p.live}">Live site</a>` : "",
+      p.private ? `<span>Private repo</span>` : "",
+    ].join("");
+    return `<article class="card reveal" style="--c: ${p.c}">
+      ${visual}
+      <div class="body">
+        <div class="num mono">${String(i + 1).padStart(2, "0")}</div>
+        <h3>${esc(p.name)} <span class="kind">· ${esc(p.kind)}</span></h3>
+        <p>${esc(p.text)}</p>
+        <div class="chips">${p.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>
+        ${p.role ? `<div class="role">${esc(p.role)}</div>` : ""}
+        <div class="actions">${actions}</div>
+      </div>
+    </article>`;
+  }).join("");
+
+  const certs = [
+    { c: "var(--blue)", issuer: "Google", name: "Google IT Automation with Python (Professional Certificate)", when: "Jul 2026", verify: "https://www.credly.com/go/ooZoe48Y" },
+    { c: "var(--blue)", issuer: "Google", name: "Google AI Professional Certificate (7 courses)", when: "Jul 2026" },
+    { c: "var(--blue)", issuer: "Google", name: "Google AI Essentials", when: "Jul 2026", verify: "https://www.credly.com/go/nLCEgbzF" },
+    { c: "var(--blue)", issuer: "Google", name: "Google Prompting Essentials", when: "Jul 2026", verify: "https://www.credly.com/go/JkoyiutO" },
+    { c: "var(--blue)", issuer: "Google", name: "Google Agile Essentials", when: "Jul 2026", verify: "https://www.credly.com/go/oMcSjXpt" },
+    { c: "var(--cyan)", issuer: "Meta · Coursera", name: "Introduction to Android Mobile Application Development", when: "Aug 2026", verify: "https://coursera.org/verify/F436W8KJ08AH" },
+    { c: "var(--cyan)", issuer: "Meta · Coursera", name: "Programming Fundamentals in Kotlin", when: "Aug 2026", verify: "https://coursera.org/verify/T5AJGWVE01JK" },
+    { c: "var(--cyan)", issuer: "Meta · Coursera", name: "Create the User Interface in Android Studio", when: "Aug 2026", verify: "https://coursera.org/verify/MGG36B12CKUL" },
+    { c: "var(--violet)", issuer: "Microsoft · LinkedIn Learning", name: "Microsoft Azure AI Essentials (Professional Certificate)", when: "Aug 2025" },
+    { c: "var(--violet)", issuer: "Microsoft · LinkedIn Learning", name: "Azure AI Essentials: Workloads and Machine Learning on Azure", when: "Jul 2025" },
+    { c: "var(--green)", issuer: "LinkedIn Learning", name: "Introduction to Data Science", when: "Jul 2025" },
+    { c: "var(--green)", issuer: "LinkedIn Learning", name: "Developing a Learning Mindset in the Age of AI", when: "Jul 2025" },
+    { c: "var(--red)", issuer: "TCS iON", name: "Master Data Management for Beginners", when: "Jun 2026" },
+  ];
+  document.getElementById("cert-grid").innerHTML = certs.map((c) => `
+    <div class="cert reveal" style="--c: ${c.c}">
+      <span class="issuer">${esc(c.issuer)}</span>
+      <b>${esc(c.name)}</b>
+      <div class="meta"><span>${esc(c.when)}</span>${c.verify ? `<a href="${c.verify}">Verify ↗</a>` : ""}</div>
+    </div>`).join("");
+
+  // Typing line under the tagline
+  const lines = ["Python · Flask · FastAPI · React", "REST APIs, databases and authentication", "Tested, documented, CI-backed software"];
+  const typed = document.getElementById("typed");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) { typed.textContent = lines[0]; } else {
+    let li = 0, ci = 0, del = false;
+    (function tick() {
+      const line = lines[li];
+      typed.textContent = line.slice(0, ci);
+      if (!del && ci < line.length) ci++;
+      else if (!del) { del = true; return setTimeout(tick, 1400); }
+      else if (ci > 0) ci--;
+      else { del = false; li = (li + 1) % lines.length; }
+      setTimeout(tick, del ? 28 : 55);
+    })();
+  }
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  // Theme toggle, remembered per visitor
+  const root = document.documentElement;
+  try { const saved = localStorage.getItem("theme"); if (saved) root.dataset.theme = saved; } catch (_) {}
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (_) {}
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

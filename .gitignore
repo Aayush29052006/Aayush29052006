@@ -1,2 +1,4 @@
 # Local-only notes (audit report, render preview); never published
 private/
+# Local tool settings
+.claude/

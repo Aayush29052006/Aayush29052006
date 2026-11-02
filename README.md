@@ -9,6 +9,7 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/aayush-chaudhari-44426232a/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:aayushswapnali@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email aayushswapnali@gmail.com" /></a>
+  <a href="https://aayush29052006.github.io/Aayush29052006/"><img src="https://img.shields.io/badge/Portfolio-Visit-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio website" /></a>
   <a href="https://github.com/Aayush29052006?tab=repositories"><img src="https://img.shields.io/badge/Projects-Browse-A78BFA?style=for-the-badge&logo=github&logoColor=white" alt="Browse repositories" /></a>
 </p>
 
@@ -292,6 +293,7 @@ I'm open to **internships** and collaboration on full-stack projects. The fastes
   <a href="https://www.linkedin.com/in/aayush-chaudhari-44426232a/"><img src="https://img.shields.io/badge/LinkedIn-Aayush%20Chaudhari-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:aayushswapnali@gmail.com"><img src="https://img.shields.io/badge/Email-aayushswapnali%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email: aayushswapnali@gmail.com" /></a>
   <a href="https://github.com/Aayush29052006"><img src="https://img.shields.io/badge/GitHub-Aayush29052006-A78BFA?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://aayush29052006.github.io/Aayush29052006/"><img src="https://img.shields.io/badge/Portfolio-aayush29052006.github.io-22D3EE?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio website" /></a>
 </p>
 
 <p align="center">
