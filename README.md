@@ -280,6 +280,12 @@ A cinematic, **Harry Potter-inspired** onboarding and event portal for the SSBT 
 #### Recent activity
 
 <!--START_SECTION:activity-->
+1. 🔨 **[VertexSquad](https://github.com/Aayush29052006/VertexSquad)**: [security: stop the published demo password from unlocking admin](https://github.com/Aayush29052006/VertexSquad/commit/9bdb92edef00704c6403a0121e9b7b8a68673fae) · <sub>today</sub>
+2. 🔨 **[Pixel-Forge](https://github.com/Aayush29052006/Pixel-Forge)**: [Make large batches much faster: parallel conversion, previews, stored...](https://github.com/Aayush29052006/Pixel-Forge/commit/d21b10ca3b66e2f6ffda94ebe270d1733a0b294b) · <sub>Sep 2026</sub>
+3. 🔨 **[Contact-Vault-V2](https://github.com/Aayush29052006/Contact-Vault-V2)**: [Remove outdated private-repo note](https://github.com/Aayush29052006/Contact-Vault-V2/commit/86925515ac48373d846a4e516b3c87425b1cc3ec) · <sub>Sep 2026</sub>
+4. 🔨 **[Watch-Tower](https://github.com/Aayush29052006/Watch-Tower)**: [Add screenshots section to README](https://github.com/Aayush29052006/Watch-Tower/commit/26a4ef9f54a04d5c9df6947e83334978e5e61431) · <sub>Jul 2026</sub>
+5. 🔨 **[Contact-Vault](https://github.com/Aayush29052006/Contact-Vault)**: [Update clone URL to match renamed repository](https://github.com/Aayush29052006/Contact-Vault/commit/51ea22dabed8ff043ad9daa953b6de9335eb0ea1) · <sub>Jul 2026</sub>
+6. 🔨 **[Parallel-System-Monitor-V2](https://github.com/Aayush29052006/Parallel-System-Monitor-V2)**: [Reference LICENSE in README](https://github.com/Aayush29052006/Parallel-System-Monitor-V2/commit/16e111e0ea4470ee5b2dcce9dfa62f528faeaf10) · <sub>Jul 2026</sub>
 <!--END_SECTION:activity-->
 
 <p align="center"><sub>Graphs, animations and the activity feed refresh automatically via GitHub Actions.</sub></p>
