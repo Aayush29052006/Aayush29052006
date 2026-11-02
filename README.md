@@ -215,7 +215,7 @@ A cinematic, **Harry Potter-inspired** onboarding and event portal for the SSBT 
 | Certification | Issuer | Issued | Verify |
 |---|---|---|---|
 | **Google IT Automation with Python** (Professional Certificate) | <img src="https://img.shields.io/badge/Google-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google" /> | Jul 2026 | [Credly](https://www.credly.com/go/ooZoe48Y) |
-| **Google AI Professional Certificate** (7 courses, listed below) | <img src="https://img.shields.io/badge/Google-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google" /> | Jul 2026 | — |
+| **Google AI Professional Certificate** (7 courses, listed below) | <img src="https://img.shields.io/badge/Google-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google" /> | Jul 2026 | [Credly](https://www.credly.com/badges/e23c4dde-af63-4bc7-9980-10b95b2d17cb) |
 | Google AI Essentials | <img src="https://img.shields.io/badge/Google-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google" /> | Jul 2026 | [Credly](https://www.credly.com/go/nLCEgbzF) |
 | Google Prompting Essentials | <img src="https://img.shields.io/badge/Google-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google" /> | Jul 2026 | [Credly](https://www.credly.com/go/JkoyiutO) |
 | Google Agile Essentials | <img src="https://img.shields.io/badge/Google-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google" /> | Jul 2026 | [Credly](https://www.credly.com/go/oMcSjXpt) |
