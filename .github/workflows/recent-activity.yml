@@ -1,5 +1,6 @@
-# Refreshes the "Recent activity" list in README.md between the
-# START_SECTION:activity / END_SECTION:activity markers.
+# Refreshes the "Recent activity" list in README.md (between the
+# START_SECTION:activity / END_SECTION:activity markers) with the most
+# recently updated public projects and their latest commit.
 name: Update recent activity
 
 on:
@@ -16,11 +17,18 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
-      - uses: jamesgeorge007/github-activity-readme@v0.5.0
+
+      - name: Rebuild activity section
+        run: python .github/scripts/update_activity.py
         env:
+          OWNER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          COMMIT_MSG: "chore: refresh recent activity"
-          COMMIT_NAME: github-actions
-          COMMIT_EMAIL: github-actions@github.com
-          MAX_LINES: 6
+
+      - name: Commit if changed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add README.md
+          if git commit -m "chore: refresh recent activity"; then
+            git push
+          fi
