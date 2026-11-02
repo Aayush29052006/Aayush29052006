@@ -64,7 +64,7 @@
     backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
   }
   nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
-  .logo { font-weight: 800; text-decoration: none; font-size: 18px; }
+  .logo { font-weight: 800; text-decoration: none; font-size: 18px; color: var(--violet); }
   .links { display: flex; gap: 20px; align-items: center; }
   .links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; }
   .links a:hover { color: var(--text); }
@@ -96,7 +96,8 @@
     transition: transform .15s ease, border-color .15s ease;
   }
   .btn:hover { transform: translateY(-2px); border-color: var(--violet); }
-  .btn.primary { background: var(--rainbow); color: #0D1117; border: 0; }
+  .btn.primary { background: var(--violet); color: #0D1117; border: 0; }
+  .btn.primary:hover { background: #C4B5FD; }
   .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 48px; }
   .fact { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
   .fact b { display: block; font-size: 28px; font-weight: 800; }
@@ -194,7 +195,7 @@
 
 <nav>
   <div class="wrap">
-    <a class="logo rainbow-text mono" href="#top">Aayush.dev</a>
+    <a class="logo mono" href="#top">Aayush.dev</a>
     <div class="links">
       <a class="hide-sm" href="#about">About</a>
       <a class="hide-sm" href="#skills">Skills</a>
