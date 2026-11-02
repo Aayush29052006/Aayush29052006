@@ -62,53 +62,65 @@ Every project here has a layered architecture, an automated test suite and a REA
 
 ## Featured Projects
 
-#### [CareerNexus](https://github.com/Aayush29052006/VertexSquad) · Smart India Hackathon 2026 · Team VertexSquad
-
-> Students often can't tell how their skills line up against what companies actually hire for. CareerNexus closes that gap.
-
-A student uploads a resume and the platform **extracts their skills with AI**. It then matches them to internship listings with a **transparent match score**, explains *why* they matched, and shows which skills to learn next. Five role-based portals serve students, recruiters, faculty, institutions and admins.
-
-**Stack:** FastAPI · SQLAlchemy · PostgreSQL (Supabase) · JWT + Google Sign-In · Gemini API · pypdf · HTML/CSS/JS
-**Role:** lead developer. I wrote 102 of the 104 commits, covering the frontend, FastAPI integration, authentication, security hardening and Render deployment.
-**Status:** hackathon prototype · live demo currently offline
-
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### [Contact Vault v2.0](https://github.com/Aayush29052006/Contact-Vault-V2) · Web
-<a href="https://github.com/Aayush29052006/Contact-Vault-V2"><img src="https://raw.githubusercontent.com/Aayush29052006/Contact-Vault-V2/main/screenshots/dashboard-dark.png" alt="Contact Vault v2 dashboard in dark mode" width="100%" /></a>
+#### 1 · [Contact Vault v1.0](https://github.com/Aayush29052006/Contact-Vault) · Desktop + CLI
+<a href="https://github.com/Aayush29052006/Contact-Vault"><img src="https://raw.githubusercontent.com/Aayush29052006/Contact-Vault/main/screenshots/contacts_dark.png" alt="Contact Vault desktop app in dark mode" width="100%" /></a>
 
-A multi-user contact manager with **Google sign-in**, duplicate detection, two-way undo, a permanent activity log, bulk import, CSV/JSON export and light/dark themes.
+A desktop GUI and a full CLI share one validated, deduplicated data layer. Features RFC-compliant email validation, Command-pattern undo and crash-safe atomic writes.
 
-`Flask` `SQLAlchemy` `Alembic` `Authlib` `Flask-WTF` · **118 tests · cross-OS CI**
+`CustomTkinter` `email-validator` `pytest` · **cross-OS CI**
 
 </td>
 <td width="50%" valign="top">
 
-#### [Parallel System Monitor v2.0](https://github.com/Aayush29052006/Parallel-System-Monitor-V2) · Web
-<a href="https://github.com/Aayush29052006/Parallel-System-Monitor-V2"><img src="https://raw.githubusercontent.com/Aayush29052006/Parallel-System-Monitor-V2/main/screenshots/dashboard-dark-mode.png" alt="Parallel System Monitor web dashboard in dark mode" width="100%" /></a>
+#### 2 · [Contact Vault v2.0](https://github.com/Aayush29052006/Contact-Vault-V2) · Web
+<a href="https://github.com/Aayush29052006/Contact-Vault-V2"><img src="https://raw.githubusercontent.com/Aayush29052006/Contact-Vault-V2/main/screenshots/dashboard-dark.png" alt="Contact Vault v2 dashboard in dark mode" width="100%" /></a>
 
-Polls many hosts **concurrently** for CPU, memory and latency. Shows live status, sparkline trends and a 24-hour health chart drawn from real history.
+The web successor. A multi-user contact manager with **Google sign-in**, duplicate detection, two-way undo, a permanent activity log, bulk import, CSV/JSON export and light/dark themes.
 
-`Flask` `ThreadPoolExecutor` `psutil` `SQLite` `JavaScript` · **67 tests**
+`Flask` `SQLAlchemy` `Alembic` `Authlib` `Flask-WTF` · **118 tests · cross-OS CI**
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-#### [Watch Tower](https://github.com/Aayush29052006/Watch-Tower) · Web
-<a href="https://github.com/Aayush29052006/Watch-Tower"><img src="https://raw.githubusercontent.com/Aayush29052006/Watch-Tower/main/screenshots/02-dashboard-alerts-dark-mode.png" alt="Watch Tower alert dashboard in dark mode" width="100%" /></a>
+#### 3 · [Parallel System Monitor v1.0](https://github.com/Aayush29052006/Parallel-System-Monitor) · Desktop
+<a href="https://github.com/Aayush29052006/Parallel-System-Monitor"><img src="https://raw.githubusercontent.com/Aayush29052006/Parallel-System-Monitor/main/screenshots/dashboard_dark_mode.png" alt="Parallel System Monitor desktop dashboard in dark mode" width="100%" /></a>
 
-A log-alerting service that **never crashes**. It survives corrupted lines, log rotation and truncation, missing files and permission errors, and dedups alert storms. Every failure mode has a test that simulates it.
+Polls multiple hosts for CPU and memory **in parallel** with a `ThreadPoolExecutor`, and proves the speed-up with measured timing. Includes a health score, a 24-hour trend graph and status-change history.
 
-`Flask` `Python` `JavaScript` · **72 tests**
+`CustomTkinter` `ThreadPoolExecutor` `psutil` `SQLite` · **47 tests · CI**
 
 </td>
 <td width="50%" valign="top">
 
-#### [Pixel Forge](https://github.com/Aayush29052006/Pixel-Forge) · Web
+#### 4 · [Parallel System Monitor v2.0](https://github.com/Aayush29052006/Parallel-System-Monitor-V2) · Web
+<a href="https://github.com/Aayush29052006/Parallel-System-Monitor-V2"><img src="https://raw.githubusercontent.com/Aayush29052006/Parallel-System-Monitor-V2/main/screenshots/dashboard-dark-mode.png" alt="Parallel System Monitor web dashboard in dark mode" width="100%" /></a>
+
+The web version reuses v1's polling engine unchanged. Adds browser-triggered polling, live search and sort, sparkline trends and a 24-hour health chart drawn from real history.
+
+`Flask` `psutil` `SQLite` `JavaScript` · **67 tests**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 5 · [Session Ledger](https://github.com/Aayush29052006/Session-Ledger) · CLI
+<a href="https://github.com/Aayush29052006/Session-Ledger"><img src="https://raw.githubusercontent.com/Aayush29052006/Session-Ledger/main/screenshots/full_report.png" alt="Session Ledger terminal report" width="100%" /></a>
+
+Turns login/logout logs into session history, a live "who's online" view and CSV/JSON reports. It copes with messy real-world logs without crashing.
+
+`Python` `Rich` `pyfiglet` · **27 tests · CI**
+
+</td>
+<td width="50%" valign="top">
+
+#### 6 · [Pixel Forge](https://github.com/Aayush29052006/Pixel-Forge) · Web
 <a href="https://github.com/Aayush29052006/Pixel-Forge"><img src="https://raw.githubusercontent.com/Aayush29052006/Pixel-Forge/main/docs/screenshots/dark-mode.png" alt="Pixel Forge batch image converter in dark mode" width="100%" /></a>
 
 A batch image converter that reads almost anything, including **HEIC** and **AVIF**, and writes 10 formats. It keeps animations and colour profiles, and one bad file never sinks the batch.
@@ -120,28 +132,28 @@ A batch image converter that reads almost anything, including **HEIC** and **AVI
 <tr>
 <td width="50%" valign="top">
 
-#### [Contact Vault v1.0](https://github.com/Aayush29052006/Contact-Vault) · Desktop + CLI
-<a href="https://github.com/Aayush29052006/Contact-Vault"><img src="https://raw.githubusercontent.com/Aayush29052006/Contact-Vault/main/screenshots/contacts_dark.png" alt="Contact Vault desktop app in dark mode" width="100%" /></a>
+#### 7 · [Watch Tower](https://github.com/Aayush29052006/Watch-Tower) · Web
+<a href="https://github.com/Aayush29052006/Watch-Tower"><img src="https://raw.githubusercontent.com/Aayush29052006/Watch-Tower/main/screenshots/02-dashboard-alerts-dark-mode.png" alt="Watch Tower alert dashboard in dark mode" width="100%" /></a>
 
-A desktop GUI and a full CLI share one validated, deduplicated data layer. Features RFC-compliant email validation, Command-pattern undo and crash-safe atomic writes.
+A log-alerting service that **never crashes**. It survives corrupted lines, log rotation and truncation, missing files and permission errors, and dedups alert storms. Every failure mode has a test that simulates it.
 
-`CustomTkinter` `email-validator` `pytest` · **cross-OS CI**
+`Flask` `Python` `JavaScript` · **72 tests**
 
 </td>
 <td width="50%" valign="top">
 
-#### [Session Ledger](https://github.com/Aayush29052006/Session-Ledger) · CLI
-<a href="https://github.com/Aayush29052006/Session-Ledger"><img src="https://raw.githubusercontent.com/Aayush29052006/Session-Ledger/main/screenshots/full_report.png" alt="Session Ledger terminal report" width="100%" /></a>
+#### 8 · [CareerNexus](https://github.com/Aayush29052006/VertexSquad) · Team Project
+<p align="center"><a href="https://github.com/Aayush29052006/VertexSquad"><img src="https://raw.githubusercontent.com/Aayush29052006/VertexSquad/main/frontend/assets/logos/careernexus-logo.png" alt="CareerNexus logo" width="96" /></a></p>
 
-Turns login/logout logs into session history, a live "who's online" view and CSV/JSON reports. It copes with messy real-world logs without crashing.
+**Smart India Hackathon 2026 · Team VertexSquad.** A student uploads a resume, AI extracts their skills, and they're matched to internships with an explainable score and a skill-gap path. Five role-based portals: student, recruiter, faculty, institution and admin.
 
-`Python` `Rich` `pyfiglet` · **27 tests · CI**
+`FastAPI` `SQLAlchemy` `PostgreSQL` `JWT + Google Sign-In` `Gemini API`
+
+<sub><b>My role:</b> lead developer. I wrote 102 of the 104 commits. Hackathon prototype; live demo currently offline.</sub>
 
 </td>
 </tr>
 </table>
-
-<sub>Also: <a href="https://github.com/Aayush29052006/Parallel-System-Monitor"><b>Parallel System Monitor v1.0</b></a>, the CustomTkinter desktop version, which proves its parallel speed-up with measured timing (47 tests, CI).</sub>
 
 ## Experience & Achievements
 
@@ -149,7 +161,6 @@ Turns login/logout logs into session history, a live "who's online" view and CSV
 |---|---|---|---|
 | **Internship** | Data Science Intern · industrial training programme | Uplyx Solutions Pvt. Ltd. | Aug – Oct 2025 |
 | **Hackathon** | Selected · Internal Smart India Hackathon 2026 (Team VertexSquad) | SSBT's COET, Jalgaon | Sep 2026 |
-| **Participation** | Viksit Bharat Young Leaders Dialogue (VBYLD) 2027 · Online Quiz | Ministry of Youth Affairs & Sports · MY Bharat | Sep 2026 |
 
 ## Certifications
 
