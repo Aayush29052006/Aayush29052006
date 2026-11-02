@@ -1,17 +1,20 @@
 {
-  "type": "normal",
-  "fileName": "profile-purple-dark.svg",
+  "type": "rainbow",
+  "fileName": "profile-rainbow-dark.svg",
   "backgroundColor": "#0D1117",
   "foregroundColor": "#E6EDF3",
-  "strongColor": "#C4B5FD",
+  "strongColor": "#FDE047",
   "weakColor": "#8B949E",
-  "radarColor": "#8B5CF6",
+  "radarColor": "#22D3EE",
   "growingAnimation": true,
-  "contribColors": [
-    "#161B22",
-    "#2E1065",
-    "#5B21B6",
-    "#7C3AED",
-    "#A78BFA"
-  ]
+  "saturation": "75%",
+  "contribLightness": [
+    "18%",
+    "35%",
+    "45%",
+    "55%",
+    "65%"
+  ],
+  "duration": "12s",
+  "hueRatio": -7
 }

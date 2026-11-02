@@ -1,0 +1,26 @@
+# Refreshes the "Recent activity" list in README.md between the
+# START_SECTION:activity / END_SECTION:activity markers.
+name: Update recent activity
+
+on:
+  schedule:
+    - cron: "30 */6 * * *" # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: jamesgeorge007/github-activity-readme@v0.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          COMMIT_MSG: "chore: refresh recent activity"
+          COMMIT_NAME: github-actions
+          COMMIT_EMAIL: github-actions@github.com
+          MAX_LINES: 6
