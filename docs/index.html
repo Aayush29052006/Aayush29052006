@@ -105,6 +105,12 @@
   .fact:nth-child(1) b { color: var(--red); } .fact:nth-child(2) b { color: var(--orange); }
   .fact:nth-child(3) b { color: var(--green); } .fact:nth-child(4) b { color: var(--cyan); }
   @media (max-width: 760px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+  .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .avatar {
+    width: 220px; height: 220px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+    border: 3px solid var(--violet); box-shadow: 0 0 0 8px color-mix(in srgb, var(--violet) 18%, transparent);
+  }
+  @media (max-width: 760px) { .hero-top { flex-direction: column-reverse; align-items: flex-start; gap: 24px; } .avatar { width: 140px; height: 140px; } }
 
   /* Sections */
   section { padding: 64px 0; }
@@ -209,6 +215,8 @@
 
 <header class="hero" id="top">
   <div class="wrap">
+    <div class="hero-top">
+    <div>
     <div class="eyebrow mono">Full-Stack Developer · B.Tech Computer Engineering</div>
     <h1>Hi, I'm <span style="color: var(--violet)">Aayush Jivan Chaudhari</span></h1>
     <p class="tagline">Building Ideas. Engineering Solutions. Delivering Impact.<br /><span class="typed mono" id="typed" aria-live="polite"></span></p>
@@ -217,6 +225,9 @@
       <a class="btn" href="https://github.com/Aayush29052006">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/aayush-chaudhari-44426232a/">LinkedIn</a>
       <a class="btn" href="mailto:aayushswapnali@gmail.com">Email</a>
+    </div>
+    </div>
+    <img class="avatar" src="assets/aayush.jpg" alt="Aayush Jivan Chaudhari" width="220" height="220" />
     </div>
     <div class="facts">
       <div class="fact reveal"><b>9</b><span>projects shipped</span></div>
@@ -373,10 +384,10 @@
     { c: "var(--cyan)", issuer: "Meta · Coursera", name: "Introduction to Android Mobile Application Development", when: "Aug 2026", verify: "https://coursera.org/verify/F436W8KJ08AH" },
     { c: "var(--cyan)", issuer: "Meta · Coursera", name: "Programming Fundamentals in Kotlin", when: "Aug 2026", verify: "https://coursera.org/verify/T5AJGWVE01JK" },
     { c: "var(--cyan)", issuer: "Meta · Coursera", name: "Create the User Interface in Android Studio", when: "Aug 2026", verify: "https://coursera.org/verify/MGG36B12CKUL" },
-    { c: "var(--violet)", issuer: "Microsoft · LinkedIn Learning", name: "Microsoft Azure AI Essentials (Professional Certificate)", when: "Aug 2025" },
-    { c: "var(--violet)", issuer: "Microsoft · LinkedIn Learning", name: "Azure AI Essentials: Workloads and Machine Learning on Azure", when: "Jul 2025" },
-    { c: "var(--green)", issuer: "LinkedIn Learning", name: "Introduction to Data Science", when: "Jul 2025" },
-    { c: "var(--green)", issuer: "LinkedIn Learning", name: "Developing a Learning Mindset in the Age of AI", when: "Jul 2025" },
+    { c: "var(--violet)", issuer: "Microsoft · LinkedIn Learning", name: "Microsoft Azure AI Essentials (Professional Certificate)", when: "Aug 2025", verify: "https://www.linkedin.com/feed/update/urn:li:activity:7487726366491086848/" },
+    { c: "var(--violet)", issuer: "Microsoft · LinkedIn Learning", name: "Azure AI Essentials: Workloads and Machine Learning on Azure", when: "Jul 2025", verify: "https://www.linkedin.com/feed/update/urn:li:activity:7487870349179609088/" },
+    { c: "var(--green)", issuer: "LinkedIn Learning", name: "Introduction to Data Science", when: "Jul 2025", verify: "https://www.linkedin.com/feed/update/urn:li:activity:7487513531320504320/" },
+    { c: "var(--green)", issuer: "LinkedIn Learning", name: "Developing a Learning Mindset in the Age of AI", when: "Jul 2025", verify: "https://www.linkedin.com/feed/update/urn:li:activity:7487509764390764544/" },
     { c: "var(--red)", issuer: "TCS iON", name: "Master Data Management for Beginners", when: "Jun 2026" },
   ];
   document.getElementById("cert-grid").innerHTML = certs.map((c) => `

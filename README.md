@@ -222,10 +222,10 @@ A cinematic, **Harry Potter-inspired** onboarding and event portal for the SSBT 
 | Introduction to Android Mobile Application Development | <img src="https://img.shields.io/badge/Meta-0467DF?style=flat-square&logo=meta&logoColor=white" alt="Meta" /> | Aug 2026 | [Coursera](https://coursera.org/verify/F436W8KJ08AH) |
 | Programming Fundamentals in Kotlin | <img src="https://img.shields.io/badge/Meta-0467DF?style=flat-square&logo=meta&logoColor=white" alt="Meta" /> | Aug 2026 | [Coursera](https://coursera.org/verify/T5AJGWVE01JK) |
 | Create the User Interface in Android Studio | <img src="https://img.shields.io/badge/Meta-0467DF?style=flat-square&logo=meta&logoColor=white" alt="Meta" /> | Aug 2026 | [Coursera](https://coursera.org/verify/MGG36B12CKUL) |
-| **Microsoft Azure AI Essentials** (Professional Certificate) | <img src="https://img.shields.io/badge/Microsoft-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" alt="Microsoft" /> | Aug 2025 | — |
-| Microsoft Azure AI Essentials: Workloads and Machine Learning on Azure | <img src="https://img.shields.io/badge/Microsoft-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" alt="Microsoft" /> | Jul 2025 | — |
-| Introduction to Data Science | <img src="https://img.shields.io/badge/LinkedIn%20Learning-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Learning" /> | Jul 2025 | — |
-| Developing a Learning Mindset in the Age of AI | <img src="https://img.shields.io/badge/LinkedIn%20Learning-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Learning" /> | Jul 2025 | — |
+| **Microsoft Azure AI Essentials** (Professional Certificate) | <img src="https://img.shields.io/badge/Microsoft-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" alt="Microsoft" /> | Aug 2025 | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7487726366491086848/) |
+| Microsoft Azure AI Essentials: Workloads and Machine Learning on Azure | <img src="https://img.shields.io/badge/Microsoft-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" alt="Microsoft" /> | Jul 2025 | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7487870349179609088/) |
+| Introduction to Data Science | <img src="https://img.shields.io/badge/LinkedIn%20Learning-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Learning" /> | Jul 2025 | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7487513531320504320/) |
+| Developing a Learning Mindset in the Age of AI | <img src="https://img.shields.io/badge/LinkedIn%20Learning-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Learning" /> | Jul 2025 | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7487509764390764544/) |
 | Master Data Management for Beginners | <img src="https://img.shields.io/badge/TCS%20iON-E4002B?style=flat-square" alt="TCS iON" /> | Jun 2026 | — |
 
 <details>
