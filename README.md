@@ -175,7 +175,7 @@ A batch image converter that reads almost anything, including **HEIC** and **AVI
 
 A log-alerting service that **never crashes**. It survives corrupted lines, log rotation, missing files and permission errors, and dedups alert storms. Every failure mode has a test that simulates it.
 
-<img src="https://img.shields.io/badge/Flask-A78BFA?style=flat-square" alt="Flask" /> <img src="https://img.shields.io/badge/Fault%20tolerance-A78BFA?style=flat-square" alt="Fault tolerance" /> <img src="https://img.shields.io/badge/72%20tests-A78BFA?style=flat-square" alt="72 tests" />
+<img src="https://img.shields.io/badge/Flask-A78BFA?style=flat-square" alt="Flask" /> <img src="https://img.shields.io/badge/Fault%20tolerance-A78BFA?style=flat-square" alt="Fault tolerance" /> <img src="https://img.shields.io/badge/82%20tests-A78BFA?style=flat-square" alt="82 tests" />
 
 </td>
 <td width="50%" valign="top">
