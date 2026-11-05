@@ -33,6 +33,8 @@ I'm a third-year **B.Tech Computer Engineering** student at SSBT's College of En
 
 Every project here has a layered architecture, an automated test suite and a README that explains how it works and why. Most also run CI across Ubuntu, Windows and macOS. I like taking one idea all the way, from a desktop app to a multi-user web app with Google OAuth, migrations and 118 tests.
 
+I build with AI-assisted development: I design the features and scope, review and test every change, and own what ships.
+
 - 🟥 **Backend:** REST APIs with Flask, FastAPI and Express · SQLAlchemy · OAuth 2.0 / JWT
 - 🟧 **Frontend:** React + Vite · semantic HTML · CSS design tokens · vanilla JavaScript
 - 🟨 **Quality:** pytest · Playwright · GitHub Actions · secure defaults (XSS, CSRF, CORS)
